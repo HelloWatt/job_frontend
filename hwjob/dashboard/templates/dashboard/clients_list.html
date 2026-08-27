@@ -1,0 +1,19 @@
+{% extends 'dashboard/base.html' %}
+
+{#
+    TODO à compléter.
+
+    La vue (dashboard/sites.py ClientsListView) fournit déjà :
+      - clients_list : les clients de la page courante, chacun avec
+                       .id, .full_name, .has_elec_heating, .has_anomaly
+                       et .anomaly_date ({"year": ..., "month": ...} ou None)
+      - page_obj, paginator, is_paginated : la pagination (50 par page)
+      - query : la recherche en cours
+#}
+
+{% block body %}
+    <main>
+        <h1>Clients</h1>
+        <p>Cette liste est à construire ({{ paginator.count }} clients).</p>
+    </main>
+{% endblock body %}

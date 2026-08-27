@@ -1,0 +1,16 @@
+[tool.mypy]
+python_version = "3.14"
+plugins = ["mypy_django_plugin.main"]
+files = ["dashboard", "hwjob", "manage.py"]
+exclude = "dashboard/migrations/"
+
+strict = true
+warn_unreachable = true
+pretty = true
+
+[[tool.mypy.overrides]]
+module = "dashboard.migrations.*"
+ignore_errors = true
+
+[tool.django-stubs]
+django_settings_module = "hwjob.settings"

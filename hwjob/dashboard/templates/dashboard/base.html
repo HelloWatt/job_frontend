@@ -1,0 +1,21 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{{ meta.title }}</title>
+        <meta name="description" content="{{ meta.description }}">
+
+        {% block css %}{% endblock %}
+    </head>
+
+    <body>
+        {% block body %}{% endblock %}
+
+        {% block script %}{% endblock %}
+    </body>
+</html>
